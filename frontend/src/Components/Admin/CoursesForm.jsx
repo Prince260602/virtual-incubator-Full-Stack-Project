@@ -34,7 +34,7 @@ function CourseForm() {
     }
 
     try {
-      const response = await axios.post("http://testing-cndo.onrender.com/api/users/course", data, {
+      const response = await axios.post("https://testing-cndo.onrender.com/api/users/course", data, {
         headers: {
           "Content-Type": "multipart/form-data", 
         },
