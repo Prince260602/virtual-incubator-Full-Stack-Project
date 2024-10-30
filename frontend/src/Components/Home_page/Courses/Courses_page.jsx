@@ -172,7 +172,7 @@ const Courses = () => {
       <div className="relative w-full h-40 overflow-hidden"> 
         <img
           // src={`https://testing-cndo.onrender.com/${course.imgSrc}`} 
-          src={`https://testing-cndo.onrender.com/${course.imgSrc}`} 
+          src={course.imgSrc}
           alt={course.title}
           className="course-img w-full h-full object-cover" 
         />
