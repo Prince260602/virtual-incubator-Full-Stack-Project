@@ -8,6 +8,7 @@ export const createCourse = async (req, res) => {
       return res.status(400).json({ success: false, msg: 'No file uploaded' });
     }
     const imgSrc = `${req.protocol}://${req.get('host')}/uploads/${path.basename(req.file.path)}`;
+    
     const course = await Course.create({ title, description, price, imgSrc, category });
     res.status(201).json({ success: true, msg: 'Course Added', data: course });
   } catch (error) {
