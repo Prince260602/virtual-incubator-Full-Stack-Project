@@ -24,7 +24,7 @@ const CourseDetails = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-8">
         <div className="">
         <img
-            src={`https://testing-cndo.onrender.com/${course.imgSrc}`} 
+            src={course.imgSrc}
             alt={course.title}
             className="w-full h-auto rounded-lg shadow-md"
             onError={(e) => (e.target.src = 'fallback-image-url.jpg')} 
