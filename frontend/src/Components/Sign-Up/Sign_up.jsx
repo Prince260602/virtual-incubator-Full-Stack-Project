@@ -19,7 +19,7 @@ function SignUp() {
     }
     axios
       // .post("https://virtual-incubator-full-stack-project.onrender.com/api/users/register", { username, email, password })
-      .post("http://localhost:4000/api/users/register", { username, email, password })
+      .post("https://testing-cndo.onrender.com/api/users/register", { username, email, password })
       .then((response) => {
         if (response.status === 201) {
           toast.success("User added successfully! Now you need to Login.");

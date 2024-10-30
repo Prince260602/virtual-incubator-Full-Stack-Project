@@ -58,7 +58,7 @@ function Students() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:4000/api/users/allusers')
+    axios.get('https://testing-cndo.onrender.com/api/users/allusers')
       .then((res) => {
         console.log(res.data.data);
         setUsers(res.data.data);

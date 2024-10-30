@@ -8,7 +8,7 @@ export const PhotoPage = () => {
     console.log(id);
     useEffect(()=>{
         // axios.get(`https://virtual-incubator-full-stack-project.onrender.com/api/users/userbyId/${id}`)
-        axios.get(`http://localhost:4000/api/users/userbyId/${id}`)
+        axios.get(`https://testing-cndo.onrender.com/api/users/userbyId/${id}`)
         .then((res)=>setImg(res.data.data.profilepicture))
         .catch((error)=>console.log(error))
     },[])

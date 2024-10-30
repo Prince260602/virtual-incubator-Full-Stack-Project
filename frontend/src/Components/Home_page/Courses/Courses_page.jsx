@@ -122,8 +122,8 @@ const Courses = () => {
   }, []); 
   useEffect(()=>{
     setTimeout(()=>{
-      axios.get("http://localhost:4000/api/users/courses")
-      // axios.get("http://localhost:4000/api/users/courses")
+      axios.get("https://testing-cndo.onrender.com/api/users/courses")
+      // axios.get("https://testing-cndo.onrender.com/api/users/courses")
      .then((res)=> setcourses(res.data.data))
       // setcourses(res) 
      .catch((err)=>console.log(err))
@@ -148,7 +148,7 @@ const Courses = () => {
         {courses.map((course, index) => (
           <div key={index} className="course-card">
              <img
-           src={`http://localhost:4000/${course.imgSrc}`}
+           src={`https://testing-cndo.onrender.com/${course.imgSrc}`}
 
             alt={course.title}
             className="course-img h-48"
@@ -171,8 +171,8 @@ const Courses = () => {
     <div key={index} className="course-card w-75 h-95 flex flex-col items-center border rounded-lg shadow-md overflow-hidden"> 
       <div className="relative w-full h-40 overflow-hidden"> 
         <img
-          // src={`http://localhost:4000/${course.imgSrc}`} 
-          src={`http://localhost:4000/${course.imgSrc}`} 
+          // src={`https://testing-cndo.onrender.com/${course.imgSrc}`} 
+          src={`https://testing-cndo.onrender.com/${course.imgSrc}`} 
           alt={course.title}
           className="course-img w-full h-full object-cover" 
         />

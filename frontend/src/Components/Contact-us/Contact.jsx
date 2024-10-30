@@ -40,7 +40,7 @@ const Contactus = () => {
     const toastId = toast.loading("Loading...")
     try {
       // const res = await axios.post("https://virtual-incubator-full-stack-project.onrender.com/api/users/contact", formData);
-      const res = await axios.post("http://localhost:4000/api/users/contact", formData);
+      const res = await axios.post("https://testing-cndo.onrender.com/api/users/contact", formData);
 
       toast.success("Email Sent Successfully")
 

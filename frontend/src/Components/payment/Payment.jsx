@@ -100,7 +100,7 @@ const PaymentForm = () => {
    const token = localStorage.getItem('token')
 
   useEffect(()=>{
-    axios.get(`http://localhost:4000/api/users/coursedetails/${id}`)
+    axios.get(`https://testing-cndo.onrender.com/api/users/coursedetails/${id}`)
     .then((res)=>SetCourse(res.data.courseDetails))
     .catch((Err)=>console.log(Err))
   },[id])
