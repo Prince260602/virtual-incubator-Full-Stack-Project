@@ -1,8 +1,12 @@
+import path from 'path'; 
 import { Course } from '../models/courseModel.js';
 
 export const createCourse = async (req, res) => {
   try {
     const { title, description, price, category } = req.body;
+    if (!req.file) {
+      return res.status(400).json({ success: false, msg: 'No file uploaded' });
+    }
     const imgSrc = `${req.protocol}://${req.get('host')}/uploads/${path.basename(req.file.path)}`;
     const course = await Course.create({ title, description, price, imgSrc, category });
     res.status(201).json({ success: true, msg: 'Course Added', data: course });
@@ -11,6 +15,7 @@ export const createCourse = async (req, res) => {
     res.status(500).json({ success: false, msg: `Course creation error: ${error.message}` });
   }
 };
+
 
 export const getAllCourses = async (req, res) => {
   try {
