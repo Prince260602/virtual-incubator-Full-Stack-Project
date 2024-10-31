@@ -210,6 +210,10 @@ import { Link } from "react-router-dom";
 import "./Courses.css";
 import axios from "axios";
 import Loader from './Loader'
+import CFAQ from "../../Course_Page_FAQ/CFAQ";
+import FirstPart from '../FirstPart';
+import Features from '../Features';
+import Sliding from '../Sliding_companies';
 
 
 const Courses = () => {
@@ -232,25 +236,33 @@ const Courses = () => {
 
   return (
     <div className="Courses-cont">
+          <FirstPart/>
+          <Features/>
+          <Sliding/>
+
+
       <h1 className=" text-2xl md:text-3xl font-bold p-3">Let the journey of self-learning begin</h1>
-      <div className="courses-wrapper">
+      <div className="courses-wrapper grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {courses.map((course, index) => (
-          <div key={index} className="course-card">
+          <div key={index} className="course-card w-75 h-95 flex flex-col items-center border rounded-lg shadow-md overflow-hidden">
+            <div className="relative w-full h-40 overflow-hidden"> 
             <img
               src={course.imgSrc}
               alt={course.title}
-              className="course-img h-48"
+              className="course-img w-full h-full object-cover"
             />
+            </div>
             <h3>{course.title}</h3>
             <div> Price : <span className="text-red-600 font-semibold text-lg"> {course.price} </span> Rs </div>
 
            
               <Link to={`/Courses/${course._id}`}>
-              <button className="course-btn">Get this Course</button>
+              <button className="course-btn bg-blue-500 text-white rounded-md px-4 py-2">Get this Course</button>
               </Link>
           </div>
         ))}
       </div>
+      <CFAQ/>
     </div>
   );
 };
