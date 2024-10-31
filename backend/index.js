@@ -7,6 +7,7 @@ import Route from "./routes/UserRoute.js";
 import courseRoute from "./routes/courseRoutes.js";
 import contactRouter from './routes/contact.js'
 
+
 dotenv.config();
 
 const app = express();
