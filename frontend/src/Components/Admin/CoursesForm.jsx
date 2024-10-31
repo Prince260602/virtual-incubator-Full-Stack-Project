@@ -181,6 +181,7 @@ function CourseForm() {
       const response = await axios.post("https://testing-cndo.onrender.com/api/users/course", formData);
       if (response.status === 201) {
         toast.success("Course added successfully!");
+        window.location.reload();
       } else {
         toast.error("Failed to add course.");
       }
